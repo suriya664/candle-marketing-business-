@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop our complete collection of hand-poured soy candles. Filter by scent, size, price, and burn time.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Shop All Candles - Lumière Candle Co.</title>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <a href="index.html" class="flex items-center space-x-2 group">
+                    <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center transform group-hover:scale-110">
+                        <i class="fas fa-fire text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl md:text-2xl font-bold text-gray-800 dark:text-white group-hover:text-orange-600">Lumière Candle Co.</span>
+                </a>
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Home</a>
+                    <a href="home2.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Home 2</a>
+                    <div class="relative group">
+                        <button class="nav-link text-orange-600 dark:text-orange-400 font-semibold flex items-center space-x-1">
+                            <span>Shop</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible">
+                            <a href="shop.html" class="block px-4 py-3 hover:bg-orange-50 hover:text-orange-600">All Candles</a>
+                            <a href="collections.html" class="block px-4 py-3 hover:bg-orange-50 hover:text-orange-600">Collections</a>
+                        </div>
+                    </div>
+                    <a href="workshops.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Workshops</a>
+                    <a href="about.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">About</a>
+                    <a href="blog.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Blog</a>
+                    <a href="contact.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <i class="fas fa-moon text-gray-700 dark:text-gray-300"></i>
+                    </button>
+                    <button class="relative p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <i class="fas fa-shopping-cart text-gray-700 dark:text-gray-300"></i>
+                        <span id="cartCount" class="absolute -top-1 -right-1 bg-orange-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </button>
+                    <a href="account.html" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <i class="fas fa-user text-gray-700 dark:text-gray-300"></i>
+                    </a>
+                    <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <i class="fas fa-bars text-gray-700 dark:text-gray-300"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="lg:hidden fixed inset-0 bg-white dark:bg-gray-800 z-40 transform translate-x-full">
+        <div class="p-4">
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-fire text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800 dark:text-white">Lumière Candle Co.</span>
+                </div>
+                <button id="closeMobileMenu" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <i class="fas fa-times text-gray-700 dark:text-gray-300"></i>
+                </button>
+            </div>
+            
+            <nav class="space-y-4">
+                <a href="index.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Home</a>
+                <a href="home2.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Home 2</a>
+                <a href="shop.html" class="block py-3 text-lg text-orange-600 dark:text-orange-400 font-semibold">Shop</a>
+                <a href="collections.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Collections</a>
+                <a href="workshops.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Workshops</a>
+                <a href="about.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">About</a>
+                <a href="blog.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Blog</a>
+                <a href="contact.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Contact</a>
+                <a href="account.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Account</a>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <main class="pt-16 md:pt-20">
+        
+        <!-- Shop Header -->
+        <section class="bg-white dark:bg-gray-800 py-8">
+            <div class="container mx-auto px-4">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Shop All Candles</h1>
+                <p class="text-gray-600 dark:text-gray-400">Discover our complete collection of hand-poured soy candles</p>
+            </div>
+        </section>
+        
+        <!-- Shop Content -->
+        <section class="py-8">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    
+                    <!-- Filters Sidebar -->
+                    <aside class="lg:w-1/4">
+                        <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg sticky top-24">
+                            <div class="flex justify-between items-center mb-6">
+                                <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Filters</h2>
+                                <button id="clearFilters" class="text-orange-600 hover:text-orange-700 text-sm">Clear All</button>
+                            </div>
+                            
+                            <!-- Search -->
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Search</label>
+                                <div class="relative">
+                                    <input type="text" id="searchInput" placeholder="Search candles..." class="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
+                                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Scent Filter -->
+                            <div class="mb-6">
+                                <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Scent</h3>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="scent-filter mr-2 text-orange-600" value="floral">
+                                        <span class="text-gray-700 dark:text-gray-300">Floral</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="scent-filter mr-2 text-orange-600" value="citrus">
+                                        <span class="text-gray-700 dark:text-gray-300">Citrus</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="scent-filter mr-2 text-orange-600" value="woody">
+                                        <span class="text-gray-700 dark:text-gray-300">Woody</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="scent-filter mr-2 text-orange-600" value="fresh">
+                                        <span class="text-gray-700 dark:text-gray-300">Fresh</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="scent-filter mr-2 text-orange-600" value="spicy">
+                                        <span class="text-gray-700 dark:text-gray-300">Spicy</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- Price Filter -->
+                            <div class="mb-6">
+                                <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Price Range</h3>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="radio" name="price" class="price-filter mr-2 text-orange-600" value="0-25">
+                                        <span class="text-gray-700 dark:text-gray-300">Under $25</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="price" class="price-filter mr-2 text-orange-600" value="25-30">
+                                        <span class="text-gray-700 dark:text-gray-300">$25 - $30</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="price" class="price-filter mr-2 text-orange-600" value="30-35">
+                                        <span class="text-gray-700 dark:text-gray-300">$30 - $35</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="price" class="price-filter mr-2 text-orange-600" value="35+">
+                                        <span class="text-gray-700 dark:text-gray-300">$35+</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    
+                    <!-- Products Grid -->
+                    <div class="lg:w-3/4">
+                        <!-- Sort and Results Count -->
+                        <div class="bg-white dark:bg-gray-800 rounded-lg p-4 mb-6 shadow-lg">
+                            <div class="flex flex-col sm:flex-row justify-between items-center">
+                                <p class="text-gray-600 dark:text-gray-400 mb-2 sm:mb-0">
+                                    Showing <span id="productCount">12</span> products
+                                </p>
+                                <div class="flex items-center space-x-4">
+                                    <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Sort by:</label>
+                                    <select id="sortSelect" class="border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-1 dark:bg-gray-700 dark:text-white">
+                                        <option value="featured">Featured</option>
+                                        <option value="price-low">Price: Low to High</option>
+                                        <option value="price-high">Price: High to Low</option>
+                                        <option value="name">Name: A-Z</option>
+                                        <option value="rating">Highest Rated</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Products Grid -->
+                        <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Products will be dynamically loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-fire text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold">Lumière Candle Co.</span>
+                    </div>
+                    <p class="text-gray-400">Hand-poured candles for calm & comfort.</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="shop.html" class="text-gray-400 hover:text-orange-400">Shop</a></li>
+                        <li><a href="collections.html" class="text-gray-400 hover:text-orange-400">Collections</a></li>
+                        <li><a href="workshops.html" class="text-gray-400 hover:text-orange-400">Workshops</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-orange-400">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Customer Care</h3>
+                    <ul class="space-y-2">
+                        <li><a href="contact.html" class="text-gray-400 hover:text-orange-400">Contact Us</a></li>
+                        <li><a href="shipping.html" class="text-gray-400 hover:text-orange-400">Shipping Info</a></li>
+                        <li><a href="returns.html" class="text-gray-400 hover:text-orange-400">Returns</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-orange-400">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-pinterest text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Lumière Candle Co. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>

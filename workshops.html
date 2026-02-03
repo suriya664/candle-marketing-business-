@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join our candle making workshops - learn the art of hand-poured candles, private events, and corporate team building sessions.">
+    <meta name="keywords" content="candle making workshops, candle classes, team building, private events">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Workshops - Lumière Candle Co.</title>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <a href="index.html" class="flex items-center space-x-2 group">
+                    <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center transform group-hover:scale-110">
+                        <i class="fas fa-fire text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl md:text-2xl font-bold text-gray-800 dark:text-white group-hover:text-orange-600">Lumière Candle Co.</span>
+                </a>
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Home</a>
+                    <a href="home2.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Home 2</a>
+                    <div class="relative group">
+                        <button class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600 flex items-center space-x-1">
+                            <span>Shop</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible">
+                            <a href="shop.html" class="block px-4 py-3 hover:bg-orange-50 hover:text-orange-600">All Candles</a>
+                            <a href="collections.html" class="block px-4 py-3 hover:bg-orange-50 hover:text-orange-600">Collections</a>
+                        </div>
+                    </div>
+                    <a href="workshops.html" class="nav-link text-orange-600 dark:text-orange-400 font-semibold">Workshops</a>
+                    <a href="about.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">About</a>
+                    <a href="blog.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Blog</a>
+                    <a href="contact.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <i class="fas fa-moon text-gray-700 dark:text-gray-300"></i>
+                    </button>
+                    <button class="relative p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <i class="fas fa-shopping-cart text-gray-700 dark:text-gray-300"></i>
+                        <span id="cartCount" class="absolute -top-1 -right-1 bg-orange-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </button>
+                    <a href="account.html" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <i class="fas fa-user text-gray-700 dark:text-gray-300"></i>
+                    </a>
+                    <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <i class="fas fa-bars text-gray-700 dark:text-gray-300"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="lg:hidden fixed inset-0 bg-white dark:bg-gray-800 z-40 transform translate-x-full">
+        <div class="p-4">
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-fire text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800 dark:text-white">Lumière Candle Co.</span>
+                </div>
+                <button id="closeMobileMenu" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <i class="fas fa-times text-gray-700 dark:text-gray-300"></i>
+                </button>
+            </div>
+            
+            <nav class="space-y-4">
+                <a href="index.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Home</a>
+                <a href="home2.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Home 2</a>
+                <a href="shop.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Shop</a>
+                <a href="collections.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Collections</a>
+                <a href="workshops.html" class="block py-3 text-lg text-orange-600 dark:text-orange-400 font-semibold">Workshops</a>
+                <a href="about.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">About</a>
+                <a href="blog.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Blog</a>
+                <a href="contact.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Contact</a>
+                <a href="account.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Account</a>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <main class="pt-16 md:pt-20">
+        
+        <!-- Hero Section -->
+        <section class="relative h-96 flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-br from-orange-900 via-amber-900 to-yellow-900"></div>
+                <div class="absolute inset-0 bg-black opacity-30"></div>
+                <img src="https://images.unsplash.com/photo-1603732551681-2e91159b9dc2?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="Candle Making Workshop" class="w-full h-full object-cover">
+            </div>
+            
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Candle Making Workshops</h1>
+                <p class="text-xl text-gray-100">Learn the art of hand-poured candles from expert artisans</p>
+            </div>
+        </section>
+        
+        <!-- Workshop Types -->
+        <section class="py-16 bg-white dark:bg-gray-800">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Choose Your Experience</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400">From beginners to advanced, we have something for everyone</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Beginner Workshop -->
+                    <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-seedling text-4xl text-green-500 mb-4"></i>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Beginner's Workshop</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">Perfect for those new to candle making</p>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                2-hour hands-on session
+                            </li>
+                            <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                All materials provided
+                            </li>
+                            <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Take home 2 candles
+                            </li>
+                            <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Safety guidelines
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <span class="text-3xl font-bold text-orange-600 dark:text-orange-400">$75</span>
+                            <button class="w-full mt-4 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Advanced Workshop -->
+                    <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-fire text-4xl text-orange-500 mb-4"></i>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Advanced Techniques</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">Master complex candle making skills</p>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                3-hour intensive session
+                            </li>
+                            <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Advanced scent blending
+                            </li>
+                            <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Layering techniques
+                            </li>
+                            <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Professional tips
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <span class="text-3xl font-bold text-orange-600 dark:text-orange-400">$125</span>
+                            <button class="w-full mt-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Private Events -->
+                    <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-users text-4xl text-purple-500 mb-4"></i>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Private Events</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">Perfect for groups and special occasions</p>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Customizable experience
+                            </li>
+                            <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                6-20 participants
+                            </li>
+                            <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Catering options
+                            </li>
+                            <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Private venue
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <span class="text-3xl font-bold text-orange-600 dark:text-orange-400">$85/person</span>
+                            <button class="w-full mt-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+                                Inquire Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Calendar Booking -->
+        <section class="py-16 bg-gray-50 dark:bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Book Your Workshop</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400">Select your preferred date and time</p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Calendar -->
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Select Date</h3>
+                                <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                                    <div class="grid grid-cols-7 gap-2 text-center">
+                                        <div class="text-sm font-semibold text-gray-600 dark:text-gray-400">Sun</div>
+                                        <div class="text-sm font-semibold text-gray-600 dark:text-gray-400">Mon</div>
+                                        <div class="text-sm font-semibold text-gray-600 dark:text-gray-400">Tue</div>
+                                        <div class="text-sm font-semibold text-gray-600 dark:text-gray-400">Wed</div>
+                                        <div class="text-sm font-semibold text-gray-600 dark:text-gray-400">Thu</div>
+                                        <div class="text-sm font-semibold text-gray-600 dark:text-gray-400">Fri</div>
+                                        <div class="text-sm font-semibold text-gray-600 dark:text-gray-400">Sat</div>
+                                        
+                                        <!-- Calendar days -->
+                                        <div class="p-2 text-gray-400">29</div>
+                                        <div class="p-2 text-gray-400">30</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">1</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">2</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">3</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">4</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">5</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">6</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">7</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">8</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">9</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">10</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">11</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">12</div>
+                                        <div class="p-2 bg-orange-600 text-white rounded cursor-pointer">13</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">14</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">15</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">16</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">17</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">18</div>
+                                        <div class="p-2 hover:bg-orange-100 dark:hover:bg-orange-900 rounded cursor-pointer">19</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Time Slots -->
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Available Times</h3>
+                                <div class="space-y-2">
+                                    <button class="w-full text-left p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-orange-100 dark:hover:bg-orange-900 transition-colors duration-200">
+                                        <div class="flex justify-between items-center">
+                                            <span class="font-medium text-gray-900 dark:text-white">10:00 AM - 12:00 PM</span>
+                                            <span class="text-sm text-gray-600 dark:text-gray-400">Beginner</span>
+                                        </div>
+                                    </button>
+                                    <button class="w-full text-left p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-orange-100 dark:hover:bg-orange-900 transition-colors duration-200">
+                                        <div class="flex justify-between items-center">
+                                            <span class="font-medium text-gray-900 dark:text-white">2:00 PM - 4:00 PM</span>
+                                            <span class="text-sm text-gray-600 dark:text-gray-400">Beginner</span>
+                                        </div>
+                                    </button>
+                                    <button class="w-full text-left p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-orange-100 dark:hover:bg-orange-900 transition-colors duration-200">
+                                        <div class="flex justify-between items-center">
+                                            <span class="font-medium text-gray-900 dark:text-white">6:00 PM - 8:00 PM</span>
+                                            <span class="text-sm text-gray-600 dark:text-gray-400">Advanced</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Registration Form -->
+                        <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Complete Your Booking</h3>
+                            <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <input type="text" placeholder="First Name" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
+                                <input type="text" placeholder="Last Name" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
+                                <input type="email" placeholder="Email" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
+                                <input type="tel" placeholder="Phone" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
+                                <select class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
+                                    <option>Select Workshop Type</option>
+                                    <option>Beginner's Workshop</option>
+                                    <option>Advanced Techniques</option>
+                                    <option>Private Event</option>
+                                </select>
+                                <input type="number" placeholder="Number of Participants" min="1" max="20" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white">
+                                <div class="md:col-span-2">
+                                    <textarea placeholder="Special requests or questions..." rows="3" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:text-white"></textarea>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+                                        Complete Booking
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Corporate Team Building -->
+        <section class="py-16 bg-white dark:bg-gray-800">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Corporate Team Building</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400">Strengthen your team through creative collaboration</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Why Choose Our Team Building?</h3>
+                        <ul class="space-y-4 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">Creative Collaboration</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Teams work together to create unique candle blends</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">Stress Relief</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Relaxing atmosphere promotes team bonding</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">Customized Experience</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Tailored to your company's goals and culture</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">Take-Home Memories</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Everyone leaves with their handmade creation</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+                            Get Quote for Your Team
+                        </button>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Team Building" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-fire text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold">Lumière Candle Co.</span>
+                    </div>
+                    <p class="text-gray-400">Hand-poured candles for calm & comfort.</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="shop.html" class="text-gray-400 hover:text-orange-400">Shop</a></li>
+                        <li><a href="collections.html" class="text-gray-400 hover:text-orange-400">Collections</a></li>
+                        <li><a href="workshops.html" class="text-gray-400 hover:text-orange-400">Workshops</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-orange-400">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Customer Care</h3>
+                    <ul class="space-y-2">
+                        <li><a href="contact.html" class="text-gray-400 hover:text-orange-400">Contact Us</a></li>
+                        <li><a href="shipping.html" class="text-gray-400 hover:text-orange-400">Shipping Info</a></li>
+                        <li><a href="returns.html" class="text-gray-400 hover:text-orange-400">Returns</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-orange-400">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-pinterest text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Lumière Candle Co. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
