@@ -10,7 +10,7 @@ const products = [
         price: 24.99,
         burnTime: 40,
         rating: 4.8,
-        image: "https://images.unsplash.com/photo-1596464616568-66726450d851?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80",
+        image: "https://www.roses-andre-eve.com/2451-thickbox_default/lavender-dreamR-interlav.jpg",
         description: "Calming lavender with hints of vanilla",
         badge: "Bestseller"
     },
@@ -57,7 +57,7 @@ const products = [
         price: 18.99,
         burnTime: 20,
         rating: 4.6,
-        image: "https://images.unsplash.com/photo-1596464616568-66726450d851?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80",
+        image: "https://images.squarespace-cdn.com/content/v1/5a4f953d9f07f548ad1d63fd/1555334553517-BJQ2S1SOOYE55H1EGHY2/ocean+breeze.jpeg?format=2500w",
         description: "Fresh sea salt with marine notes"
     },
     {
@@ -102,7 +102,7 @@ const products = [
         price: 27.99,
         burnTime: 40,
         rating: 4.7,
-        image: "https://images.unsplash.com/photo-1596464616568-66726450d851?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80",
+        image: "https://sc02.alicdn.com/kf/Hd0c44c6ff5864f47af56f249443475a7R.png",
         description: "Warm cinnamon with nutmeg"
     },
     {
@@ -146,22 +146,22 @@ let filteredProducts = [...products];
 function renderProducts(productsToRender) {
     const productsGrid = document.getElementById('productsGrid');
     const productCount = document.getElementById('productCount');
-    
+
     productsGrid.innerHTML = '';
     productCount.textContent = productsToRender.length;
-    
+
     productsToRender.forEach(product => {
         const productCard = createProductCard(product);
         productsGrid.appendChild(productCard);
     });
-    
+
     // Add event listeners to new "Add to Cart" buttons
     document.querySelectorAll('.add-to-cart').forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const productCard = this.closest('.product-card');
             const productName = productCard.querySelector('h3').textContent;
             const productPrice = productCard.querySelector('.text-orange-600').textContent;
-            
+
             addToCart(productName, productPrice);
         });
     });
@@ -169,9 +169,9 @@ function renderProducts(productsToRender) {
 
 // Create product card HTML
 function createProductCard(product) {
-    const badgeHtml = product.badge ? 
+    const badgeHtml = product.badge ?
         `<span class="absolute top-4 right-4 bg-orange-600 text-white text-xs px-2 py-1 rounded">${product.badge}</span>` : '';
-    
+
     const div = document.createElement('div');
     div.className = 'product-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300';
     div.innerHTML = `
@@ -202,22 +202,22 @@ function filterProducts() {
     const searchTerm = document.getElementById('searchInput').value.toLowerCase();
     const selectedScents = Array.from(document.querySelectorAll('.scent-filter:checked')).map(cb => cb.value);
     const selectedPrice = document.querySelector('.price-filter:checked')?.value;
-    
+
     filteredProducts = products.filter(product => {
-        const matchesSearch = product.name.toLowerCase().includes(searchTerm) || 
-                             product.description.toLowerCase().includes(searchTerm);
+        const matchesSearch = product.name.toLowerCase().includes(searchTerm) ||
+            product.description.toLowerCase().includes(searchTerm);
         const matchesScent = selectedScents.length === 0 || selectedScents.includes(product.scent);
         const matchesPrice = !selectedPrice || checkPriceRange(product.price, selectedPrice);
-        
+
         return matchesSearch && matchesScent && matchesPrice;
     });
-    
+
     renderProducts(filteredProducts);
 }
 
 // Check price range
 function checkPriceRange(price, range) {
-    switch(range) {
+    switch (range) {
         case '0-25': return price < 25;
         case '25-30': return price >= 25 && price < 30;
         case '30-35': return price >= 30 && price < 35;
@@ -228,7 +228,7 @@ function checkPriceRange(price, range) {
 
 // Sort products
 function sortProducts(sortBy) {
-    switch(sortBy) {
+    switch (sortBy) {
         case 'price-low':
             filteredProducts.sort((a, b) => a.price - b.price);
             break;
@@ -250,7 +250,7 @@ function sortProducts(sortBy) {
 // Add to cart function
 function addToCart(name, price) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    
+
     const existingItem = cart.find(item => item.name === name);
     if (existingItem) {
         existingItem.quantity++;
@@ -261,7 +261,7 @@ function addToCart(name, price) {
             quantity: 1
         });
     }
-    
+
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
     showNotification('Product added to cart!');
@@ -280,7 +280,7 @@ function showNotification(message) {
     notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
     notification.textContent = message;
     document.body.appendChild(notification);
-    
+
     setTimeout(() => {
         notification.remove();
     }, 3000);
@@ -292,36 +292,36 @@ function clearAllFilters() {
     document.querySelectorAll('.scent-filter').forEach(cb => cb.checked = false);
     document.querySelectorAll('.price-filter').forEach(cb => cb.checked = false);
     document.getElementById('sortSelect').value = 'featured';
-    
+
     filteredProducts = [...products];
     renderProducts(filteredProducts);
 }
 
 // Event listeners
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     renderProducts(products);
-    
+
     // Search
     document.getElementById('searchInput').addEventListener('input', filterProducts);
-    
+
     // Scent filters
     document.querySelectorAll('.scent-filter').forEach(checkbox => {
         checkbox.addEventListener('change', filterProducts);
     });
-    
+
     // Price filters
     document.querySelectorAll('.price-filter').forEach(radio => {
         radio.addEventListener('change', filterProducts);
     });
-    
+
     // Sort
-    document.getElementById('sortSelect').addEventListener('change', function() {
+    document.getElementById('sortSelect').addEventListener('change', function () {
         sortProducts(this.value);
     });
-    
+
     // Clear filters
     document.getElementById('clearFilters').addEventListener('click', clearAllFilters);
-    
+
     // Update cart count
     updateCartCount();
 });

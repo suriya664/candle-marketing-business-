@@ -10,20 +10,25 @@ if (localStorage.getItem('darkMode') === 'true') {
     updateDarkModeIcon();
 }
 
-darkModeToggle.addEventListener('click', () => {
-    html.classList.toggle('dark');
-    localStorage.setItem('darkMode', html.classList.contains('dark'));
-    updateDarkModeIcon();
-});
+if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        localStorage.setItem('darkMode', html.classList.contains('dark'));
+        updateDarkModeIcon();
+    });
+}
 
 function updateDarkModeIcon() {
+    if (!darkModeToggle) return;
     const icon = darkModeToggle.querySelector('i');
-    if (html.classList.contains('dark')) {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-    } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
+    if (icon) {
+        if (html.classList.contains('dark')) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
     }
 }
 
@@ -59,12 +64,12 @@ function updateCartCount() {
 // Add to cart buttons
 document.querySelectorAll('button').forEach(button => {
     if (button.textContent.includes('Add to Cart')) {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const productCard = this.closest('.bg-gray-50, .dark\\:bg-gray-700');
             if (productCard) {
                 const productName = productCard.querySelector('h3').textContent;
                 const productPrice = productCard.querySelector('.text-orange-600, .dark\\:text-orange-400').textContent;
-                
+
                 const existingItem = cart.find(item => item.name === productName);
                 if (existingItem) {
                     existingItem.quantity++;
@@ -75,10 +80,10 @@ document.querySelectorAll('button').forEach(button => {
                         quantity: 1
                     });
                 }
-                
+
                 localStorage.setItem('cart', JSON.stringify(cart));
                 updateCartCount();
-                
+
                 // Show success message
                 showNotification('Product added to cart!');
             }
@@ -92,7 +97,7 @@ function showNotification(message) {
     notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in-up';
     notification.textContent = message;
     document.body.appendChild(notification);
-    
+
     setTimeout(() => {
         notification.remove();
     }, 3000);
@@ -112,19 +117,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar scroll effect
+// Navbar scroll effect and Back to Top visibility
 const navbar = document.getElementById('navbar');
+const backToTopBtn = document.getElementById('backToTop');
 let lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
+
+    // Navbar visibility
     if (scrollTop > lastScrollTop && scrollTop > 100) {
         navbar.style.transform = 'translateY(-100%)';
     } else {
         navbar.style.transform = 'translateY(0)';
     }
-    
+
+    // Back to Top button visibility
+    if (backToTopBtn) {
+        if (scrollTop > 300) {
+            backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-10');
+            backToTopBtn.classList.add('opacity-100', 'visible', 'translate-y-0');
+        } else {
+            backToTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-10');
+            backToTopBtn.classList.remove('opacity-100', 'visible', 'translate-y-0');
+        }
+    }
+
     lastScrollTop = scrollTop;
 });
 
@@ -140,7 +158,7 @@ function validateEmail(email) {
 // Newsletter subscription
 document.querySelectorAll('button').forEach(button => {
     if (button.textContent.includes('Subscribe')) {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const emailInput = this.previousElementSibling;
             if (emailInput && emailInput.type === 'email') {
                 const email = emailInput.value;
@@ -185,20 +203,36 @@ window.addEventListener('load', () => {
 
 // Active navigation highlighting
 function updateActiveNavigation() {
-    const currentPath = window.location.pathname;
+    const path = window.location.pathname;
+    const page = path.split("/").pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href === currentPath || (href === 'index.html' && currentPath === '/')) {
+
+        // Match if current page name matches href
+        if (href === page || (page === 'index.html' && href === '/') || (page === '' && href === 'index.html')) {
             link.classList.add('text-orange-600', 'dark:text-orange-400', 'font-semibold');
             link.classList.remove('text-gray-700', 'dark:text-gray-300');
-        } else {
-            link.classList.remove('text-orange-600', 'dark:text-orange-400', 'font-semibold');
-            link.classList.add('text-gray-700', 'dark:text-gray-300');
+
+            // Highlight parent if in dropdown
+            const dropdownParent = link.closest('.group')?.querySelector('button span');
+            if (dropdownParent) {
+                dropdownParent.parentElement.classList.add('text-orange-600', 'dark:text-orange-400', 'font-semibold');
+            }
         }
     });
 }
 
 // Initialize active navigation
 updateActiveNavigation();
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in-up';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+
+    setTimeout(() => {
+        notification.remove();
+    }, 3000);
+}

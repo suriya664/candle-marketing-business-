@@ -35,10 +35,46 @@
 .dark .nav-link::after { background-color: #fb923c; }
 
 /* Scrollbar */
-::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar { width: 12px; }
 ::-webkit-scrollbar-track { background: #f1f1f1; }
 .dark ::-webkit-scrollbar-track { background: #374151; }
-::-webkit-scrollbar-thumb { background: #ea580c; border-radius: 4px; }
+::-webkit-scrollbar-thumb { 
+    background: #ea580c; 
+    border-radius: 6px; 
+    border: 3px solid #f1f1f1;
+}
+.dark ::-webkit-scrollbar-thumb {
+    border: 3px solid #374151;
+}
+::-webkit-scrollbar-button {
+    display: block;
+    height: 12px;
+    background-color: #fb923c;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px;
+}
+::-webkit-scrollbar-button:vertical:decrement {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z'/%3E%3C/svg%3E");
+}
+::-webkit-scrollbar-button:vertical:increment {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z'/%3E%3C/svg%3E");
+}
+
+/* Dropdown Bridge */
+.group:hover .absolute {
+    display: block;
+    animation: fade-in-up 0.2s ease-out forwards;
+}
+.group .absolute::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: transparent;
+}
 
 /* Forms */
 .form-input { transition: all 0.3s ease; border: 2px solid transparent; }

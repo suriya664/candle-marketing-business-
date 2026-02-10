@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Create a Lumière Candle Co. account to start your journey with handcrafted, premium candles.">
+    <meta name="keywords" content="signup, register, account, lumiere candle co">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Sign Up - Lumière Candle Co.</title>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 min-h-screen flex items-center justify-center">
+
+    <!-- Theme Toggle -->
+    <button id="darkModeToggle"
+        class="fixed top-8 right-8 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg z-50 hover:scale-110 transition-transform duration-300">
+        <i class="fas fa-moon text-gray-700 dark:text-gray-300"></i>
+    </button>
+
+    <!-- Signup Container -->
+    <div class="w-full max-w-md mx-4 py-12">
+        <!-- Logo and Brand -->
+        <div class="text-center mb-8">
+            <a href="index.html" class="inline-flex justify-center items-center space-x-2 group mb-4">
+                <div
+                    class="w-12 h-12 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110">
+                    <i class="fas fa-fire text-white text-xl"></i>
+                </div>
+                <span
+                    class="text-2xl font-bold text-gray-800 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">Lumière
+                    Candle Co.</span>
+            </a>
+            <h1 class="text-2xl font-semibold text-gray-900 dark:text-white mb-2">Create Account</h1>
+            <p class="text-gray-600 dark:text-gray-400">Join our community of candle lovers</p>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+            <form id="signupForm" class="space-y-5">
+                <!-- Full Name -->
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        Full Name
+                    </label>
+                    <div class="relative">
+                        <input type="text" id="name" name="name" required
+                            class="w-full px-4 py-3 pl-10 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                            placeholder="John Doe">
+                        <i class="fas fa-user absolute left-3 top-3.5 text-gray-400"></i>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        Email Address
+                    </label>
+                    <div class="relative">
+                        <input type="email" id="email" name="email" required
+                            class="w-full px-4 py-3 pl-10 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                            placeholder="you@example.com">
+                        <i class="fas fa-envelope absolute left-3 top-3.5 text-gray-400"></i>
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        Password
+                    </label>
+                    <div class="relative">
+                        <input type="password" id="password" name="password" required
+                            class="w-full px-4 py-3 pl-10 pr-10 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                            placeholder="••••••••">
+                        <i class="fas fa-lock absolute left-3 top-3.5 text-gray-400"></i>
+                    </div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div>
+                    <label for="confirmPassword"
+                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        Confirm Password
+                    </label>
+                    <div class="relative">
+                        <input type="password" id="confirmPassword" name="confirmPassword" required
+                            class="w-full px-4 py-3 pl-10 pr-10 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                            placeholder="••••••••">
+                        <i class="fas fa-lock absolute left-3 top-3.5 text-gray-400"></i>
+                    </div>
+                </div>
+
+                <!-- Terms -->
+                <div class="flex items-start">
+                    <input type="checkbox" id="terms" required
+                        class="mt-1 w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-500">
+                    <label for="terms" class="ml-2 text-sm text-gray-600 dark:text-gray-400">
+                        I agree to the <a href="#" class="text-orange-600 hover:text-orange-700">Terms of Service</a>
+                        and <a href="#" class="text-orange-600 hover:text-orange-700">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <!-- Register Button -->
+                <button type="submit"
+                    class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center">
+                    <i class="fas fa-user-plus mr-2"></i>
+                    Create Account
+                </button>
+            </form>
+
+            <!-- Divider -->
+            <div class="relative my-6">
+                <div class="absolute inset-0 flex items-center">
+                    <div class="w-full border-t border-gray-300 dark:border-gray-600"></div>
+                </div>
+                <div class="relative flex justify-center text-sm">
+                    <span class="px-2 bg-white dark:bg-gray-800 text-gray-500">Or sign up with</span>
+                </div>
+            </div>
+
+            <!-- Social Signup Buttons -->
+            <div class="grid grid-cols-3 gap-3">
+                <button
+                    class="flex items-center justify-center px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors duration-200">
+                    <i class="fab fa-google text-red-500"></i>
+                </button>
+                <button
+                    class="flex items-center justify-center px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors duration-200">
+                    <i class="fab fa-facebook text-blue-600"></i>
+                </button>
+                <button
+                    class="flex items-center justify-center px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors duration-200">
+                    <i class="fab fa-apple text-gray-800 dark:text-white"></i>
+                </button>
+            </div>
+
+            <!-- Login Link -->
+            <div class="mt-6 text-center">
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Already have an account?
+                    <a href="login.html" class="font-medium text-orange-600 hover:text-orange-700 dark:text-orange-400">
+                        Sign in
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Handle signup form submission
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                showNotification('Passwords do not match!', 'error');
+                return;
+            }
+
+            // Simple validation
+            showNotification('Registration successful! Redirecting to login...');
+
+            // Redirect to login page after delay
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 1500);
+        });
+    </script>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="backToTop"
+        class="fixed bottom-8 right-8 bg-orange-600 hover:bg-orange-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg z-50 opacity-0 invisible translate-y-10 transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</body>
+
+</html>

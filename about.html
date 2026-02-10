@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Lumière Candle Co. - our story, craft process, sustainability mission, and meet the makers behind your favorite hand-poured candles.">
+    <meta name="description"
+        content="Learn about Lumière Candle Co. - our story, craft process, sustainability mission, and meet the makers behind your favorite hand-poured candles.">
     <meta name="keywords" content="about us, candle makers, sustainable candles, hand-poured candles story">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,63 +13,79 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>About Us - Lumière Candle Co.</title>
 </head>
+
 <body class="bg-gray-50 dark:bg-gray-900">
-    
+
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-md z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center h-16 md:h-20">
                 <a href="index.html" class="flex items-center space-x-2 group">
-                    <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center transform group-hover:scale-110">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center transform group-hover:scale-110">
                         <i class="fas fa-fire text-white text-lg"></i>
                     </div>
-                    <span class="text-xl md:text-2xl font-bold text-gray-800 dark:text-white group-hover:text-orange-600">Lumière Candle Co.</span>
+                    <span
+                        class="text-xl md:text-2xl font-bold text-gray-800 dark:text-white group-hover:text-orange-600">Lumière
+                        Candle Co.</span>
                 </a>
-                
+
                 <div class="hidden lg:flex items-center space-x-8">
-                    <a href="index.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Home</a>
-                    <a href="home2.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Home 2</a>
+                    <a href="index.html"
+                        class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Home</a>
+                    <a href="home2.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Home
+                        2</a>
                     <div class="relative group">
-                        <button class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600 flex items-center space-x-1">
+                        <button
+                            class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600 flex items-center space-x-1">
                             <span>Shop</span>
                             <i class="fas fa-chevron-down text-xs"></i>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible">
-                            <a href="shop.html" class="block px-4 py-3 hover:bg-orange-50 hover:text-orange-600">All Candles</a>
-                            <a href="collections.html" class="block px-4 py-3 hover:bg-orange-50 hover:text-orange-600">Collections</a>
+                        <div
+                            class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible">
+                            <a href="shop.html" class="block px-4 py-3 hover:bg-orange-50 hover:text-orange-600">All
+                                Candles</a>
+                            <a href="collections.html"
+                                class="block px-4 py-3 hover:bg-orange-50 hover:text-orange-600">Collections</a>
                         </div>
                     </div>
-                    <a href="workshops.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Workshops</a>
+                    <a href="workshops.html"
+                        class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Workshops</a>
                     <a href="about.html" class="nav-link text-orange-600 dark:text-orange-400 font-semibold">About</a>
-                    <a href="blog.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Blog</a>
-                    <a href="contact.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Contact</a>
+                    <a href="login.html"
+                        class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Login</a>
+                    <a href="contact.html"
+                        class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Contact</a>
                 </div>
-                
+
                 <div class="flex items-center space-x-4">
                     <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
                         <i class="fas fa-moon text-gray-700 dark:text-gray-300"></i>
                     </button>
                     <button class="relative p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
                         <i class="fas fa-shopping-cart text-gray-700 dark:text-gray-300"></i>
-                        <span id="cartCount" class="absolute -top-1 -right-1 bg-orange-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                        <span id="cartCount"
+                            class="absolute -top-1 -right-1 bg-orange-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
                     </button>
                     <a href="account.html" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
                         <i class="fas fa-user text-gray-700 dark:text-gray-300"></i>
                     </a>
-                    <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <button id="mobileMenuToggle"
+                        class="lg:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
                         <i class="fas fa-bars text-gray-700 dark:text-gray-300"></i>
                     </button>
                 </div>
             </div>
         </div>
     </nav>
-    
+
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="lg:hidden fixed inset-0 bg-white dark:bg-gray-800 z-40 transform translate-x-full">
         <div class="p-4">
             <div class="flex justify-between items-center mb-8">
                 <div class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center">
                         <i class="fas fa-fire text-white text-lg"></i>
                     </div>
                     <span class="text-xl font-bold text-gray-800 dark:text-white">Lumière Candle Co.</span>
@@ -76,119 +94,143 @@
                     <i class="fas fa-times text-gray-700 dark:text-gray-300"></i>
                 </button>
             </div>
-            
+
             <nav class="space-y-4">
                 <a href="index.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Home</a>
                 <a href="home2.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Home 2</a>
                 <a href="shop.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Shop</a>
                 <a href="collections.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Collections</a>
                 <a href="workshops.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Workshops</a>
-                <a href="about.html" class="block py-3 text-lg text-orange-600 dark:text-orange-400 font-semibold">About</a>
-                <a href="blog.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Blog</a>
+                <a href="about.html"
+                    class="block py-3 text-lg text-orange-600 dark:text-orange-400 font-semibold">About</a>
+                <a href="login.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Login</a>
                 <a href="contact.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Contact</a>
                 <a href="account.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Account</a>
             </nav>
         </div>
     </div>
-    
+
     <!-- Main Content -->
     <main class="pt-16 md:pt-20">
-        
+
         <!-- Hero Section -->
         <section class="relative h-96 flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 z-0">
                 <div class="absolute inset-0 bg-gradient-to-br from-orange-900 via-amber-900 to-yellow-900"></div>
                 <div class="absolute inset-0 bg-black opacity-30"></div>
-                <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="About Us" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                    alt="About Us" class="w-full h-full object-cover">
             </div>
-            
+
             <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
                 <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Our Story</h1>
                 <p class="text-xl text-gray-100">Crafting light and warmth since 2018</p>
             </div>
         </section>
-        
+
         <!-- Brand Story -->
         <section class="py-16 bg-white dark:bg-gray-800">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">From Passion to Purpose</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">From Passion to
+                            Purpose</h2>
                         <div class="space-y-4 text-gray-600 dark:text-gray-300">
                             <p>
-                                Lumière Candle Co. began in a small kitchen with a simple mission: to create beautiful, eco-friendly candles that bring warmth and comfort to every home. What started as a hobby quickly grew into a passion for perfecting the art of candle making.
+                                Lumière Candle Co. began in a small kitchen with a simple mission: to create beautiful,
+                                eco-friendly candles that bring warmth and comfort to every home. What started as a
+                                hobby quickly grew into a passion for perfecting the art of candle making.
                             </p>
                             <p>
-                                Our founder, Sarah Mitchell, discovered her love for candle making while searching for natural alternatives to commercial candles that were filled with harmful chemicals. She spent years experimenting with different waxes, wicks, and fragrance combinations to develop the perfect formula.
+                                Our founder, Sarah Mitchell, discovered her love for candle making while searching for
+                                natural alternatives to commercial candles that were filled with harmful chemicals. She
+                                spent years experimenting with different waxes, wicks, and fragrance combinations to
+                                develop the perfect formula.
                             </p>
                             <p>
-                                Today, we're proud to hand-pour each candle in our workshop, using only the finest sustainable ingredients. Every candle tells a story of craftsmanship, sustainability, and the belief that everyone deserves a moment of peace and tranquility in their busy lives.
+                                Today, we're proud to hand-pour each candle in our workshop, using only the finest
+                                sustainable ingredients. Every candle tells a story of craftsmanship, sustainability,
+                                and the belief that everyone deserves a moment of peace and tranquility in their busy
+                                lives.
                             </p>
                         </div>
                     </div>
                     <div>
-                        <img src="https://images.unsplash.com/photo-1603732551681-2e91159b9dc2?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="Our Workshop" class="rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1603732551681-2e91159b9dc2?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+                            alt="Our Workshop" class="rounded-lg shadow-lg">
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- Craft Process -->
         <section class="py-16 bg-gray-50 dark:bg-gray-900">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Craft Process</h2>
-                    <p class="text-lg text-gray-600 dark:text-gray-400">Every candle is made with care and attention to detail</p>
+                    <p class="text-lg text-gray-600 dark:text-gray-400">Every candle is made with care and attention to
+                        detail</p>
                 </div>
-                
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="text-center">
-                        <div class="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-leaf text-orange-600 dark:text-orange-400 text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Sustainable Sourcing</h3>
-                        <p class="text-gray-600 dark:text-gray-400">We source our soy wax from sustainable farms and use only eco-friendly materials</p>
+                        <p class="text-gray-600 dark:text-gray-400">We source our soy wax from sustainable farms and use
+                            only eco-friendly materials</p>
                     </div>
-                    
+
                     <div class="text-center">
-                        <div class="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-flask text-orange-600 dark:text-orange-400 text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Quality Testing</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Each batch is rigorously tested for burn time, scent throw, and safety</p>
+                        <p class="text-gray-600 dark:text-gray-400">Each batch is rigorously tested for burn time, scent
+                            throw, and safety</p>
                     </div>
-                    
+
                     <div class="text-center">
-                        <div class="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-hand-holding-heart text-orange-600 dark:text-orange-400 text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Hand-Poured</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Every candle is individually poured by our skilled artisans</p>
+                        <p class="text-gray-600 dark:text-gray-400">Every candle is individually poured by our skilled
+                            artisans</p>
                     </div>
-                    
+
                     <div class="text-center">
-                        <div class="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-box text-orange-600 dark:text-orange-400 text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Careful Packaging</h3>
-                        <p class="text-gray-600 dark:text-gray-400">We use recyclable materials to ensure your candles arrive safely</p>
+                        <p class="text-gray-600 dark:text-gray-400">We use recyclable materials to ensure your candles
+                            arrive safely</p>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- Sustainability Mission -->
         <section class="py-16 bg-white dark:bg-gray-800">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="Sustainability" class="rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+                            alt="Sustainability" class="rounded-lg shadow-lg">
                     </div>
                     <div>
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Our Sustainability Mission</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Our Sustainability
+                            Mission</h2>
                         <div class="space-y-4 text-gray-600 dark:text-gray-300">
                             <p>
-                                At Lumière Candle Co., we believe that beautiful products shouldn't come at the expense of our planet. That's why sustainability is at the heart of everything we do.
+                                At Lumière Candle Co., we believe that beautiful products shouldn't come at the expense
+                                of our planet. That's why sustainability is at the heart of everything we do.
                             </p>
                             <ul class="space-y-2">
                                 <li class="flex items-start">
@@ -217,47 +259,60 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Meet the Team -->
         <section class="py-16 bg-gray-50 dark:bg-gray-900">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Meet the Makers</h2>
-                    <p class="text-lg text-gray-600 dark:text-gray-400">The passionate team behind your favorite candles</p>
+                    <p class="text-lg text-gray-600 dark:text-gray-400">The passionate team behind your favorite candles
+                    </p>
                 </div>
-                
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="text-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
-                        <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Sarah Mitchell</h3>
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=256&h=256&q=80"
+                            alt="Founder"
+                            class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-orange-100">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Sarah M.</h3>
                         <p class="text-orange-600 dark:text-orange-400 mb-3">Founder & CEO</p>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm">Passionate about creating sustainable, beautiful candles that bring joy to every home.</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Passionate about creating sustainable,
+                            beautiful candles that bring joy to every home.</p>
                     </div>
-                    
+
                     <div class="text-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
-                        <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Michael Chen</h3>
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=256&h=256&q=80"
+                            alt="Master Candle Maker"
+                            class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-orange-100">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Michael R.</h3>
                         <p class="text-orange-600 dark:text-orange-400 mb-3">Master Candle Maker</p>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm">With over 15 years of experience, Michael perfects every scent blend.</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">With over 15 years of experience, Michael
+                            perfects every scent blend.</p>
                     </div>
-                    
+
                     <div class="text-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
-                        <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Emma Rodriguez</h3>
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=256&h=256&q=80"
+                            alt="Creative Director"
+                            class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-orange-100">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Emily L.</h3>
                         <p class="text-orange-600 dark:text-orange-400 mb-3">Creative Director</p>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm">Emma designs our beautiful packaging and creates stunning visual experiences.</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Emma designs our beautiful packaging and
+                            creates stunning visual experiences.</p>
                     </div>
-                    
+
                     <div class="text-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
-                        <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">David Park</h3>
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=256&h=256&q=80"
+                            alt="Operations Manager"
+                            class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-orange-100">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">David Thompson</h3>
                         <p class="text-orange-600 dark:text-orange-400 mb-3">Operations Manager</p>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm">David ensures every order is processed efficiently and sustainably.</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">David ensures every order is processed
+                            efficiently and sustainably.</p>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- Values Section -->
         <section class="py-16 bg-white dark:bg-gray-800">
             <div class="container mx-auto px-4">
@@ -265,45 +320,48 @@
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Values</h2>
                     <p class="text-lg text-gray-600 dark:text-gray-400">The principles that guide everything we do</p>
                 </div>
-                
+
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="text-center">
                         <i class="fas fa-heart text-4xl text-red-500 mb-4"></i>
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Made with Love</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Every candle is crafted with passion and attention to detail</p>
+                        <p class="text-gray-600 dark:text-gray-400">Every candle is crafted with passion and attention
+                            to detail</p>
                     </div>
-                    
+
                     <div class="text-center">
                         <i class="fas fa-leaf text-4xl text-green-500 mb-4"></i>
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Eco-Friendly</h3>
                         <p class="text-gray-600 dark:text-gray-400">Sustainable practices that protect our planet</p>
                     </div>
-                    
+
                     <div class="text-center">
                         <i class="fas fa-users text-4xl text-blue-500 mb-4"></i>
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Community First</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Supporting local and giving back to our community</p>
+                        <p class="text-gray-600 dark:text-gray-400">Supporting local and giving back to our community
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
-        
+
     </main>
-    
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center">
                             <i class="fas fa-fire text-white text-lg"></i>
                         </div>
                         <span class="text-xl font-bold">Lumière Candle Co.</span>
                     </div>
                     <p class="text-gray-400">Hand-poured candles for calm & comfort.</p>
                 </div>
-                
+
                 <div>
                     <h3 class="font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
@@ -313,7 +371,7 @@
                         <li><a href="about.html" class="text-gray-400 hover:text-orange-400">About Us</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="font-semibold mb-4">Customer Care</h3>
                     <ul class="space-y-2">
@@ -323,7 +381,7 @@
                         <li><a href="faq.html" class="text-gray-400 hover:text-orange-400">FAQ</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="font-semibold mb-4">Connect With Us</h3>
                     <div class="flex space-x-4 mb-4">
@@ -342,13 +400,20 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 Lumière Candle Co. All rights reserved.</p>
+                <p>&copy; 2026 Lumière Candle Co. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    
+
+    <!-- Back to Top Button -->
+    <a href="#" id="backToTop"
+        class="fixed bottom-8 right-8 bg-orange-600 hover:bg-orange-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg z-50 opacity-0 invisible translate-y-10 transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
     <script src="js/main.js"></script>
 </body>
+
 </html>
