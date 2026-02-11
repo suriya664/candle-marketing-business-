@@ -22,25 +22,25 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center h-16 md:h-20">
                 <!-- Logo -->
-                <a href="index.html" class="flex items-center space-x-2 group">
+                <a href="index.html" class="flex items-center space-x-2 group h-full">
                     <div
-                        class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110">
+                        class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110 flex-shrink-0">
                         <i class="fas fa-fire text-white text-lg"></i>
                     </div>
                     <span
-                        class="text-xl md:text-2xl font-bold text-gray-800 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">
+                        class="text-xl md:text-2xl font-bold text-gray-800 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300 whitespace-nowrap">
                         Lumière Candle Co.
                     </span>
                 </a>
 
                 <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="index.html" class="nav-link text-orange-600 dark:text-orange-400 font-semibold">Home</a>
-                    <a href="home2.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Home
+                <div class="hidden lg:flex items-center space-x-8 h-full">
+                    <a href="index.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600 flex items-center h-full">Home</a>
+                    <a href="home2.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600 flex items-center h-full">Home
                         2</a>
-                    <div class="relative group">
+                    <div class="relative group flex items-center h-full">
                         <button
-                            class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600 flex items-center space-x-1">
+                            class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600 flex items-center space-x-1 h-full">
                             <span>Shop</span>
                             <i class="fas fa-chevron-down text-xs"></i>
                         </button>
@@ -53,30 +53,36 @@
                         </div>
                     </div>
                     <a href="workshops.html"
-                        class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Workshops</a>
+                        class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600 flex items-center h-full">Workshops</a>
                     <a href="about.html"
-                        class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">About</a>
-                    <a href="login.html"
-                        class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Login</a>
+                        class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600 flex items-center h-full">About</a>
                     <a href="contact.html"
-                        class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Contact</a>
+                        class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600 flex items-center h-full">Contact</a>
                 </div>
 
                 <!-- Right Side Actions -->
-                <div class="flex items-center space-x-4">
-                    <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <i class="fas fa-moon text-gray-700 dark:text-gray-300"></i>
-                    </button>
-                    <button class="relative p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <i class="fas fa-shopping-cart text-gray-700 dark:text-gray-300"></i>
-                        <span id="cartCount"
-                            class="absolute -top-1 -right-1 bg-orange-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
-                    </button>
-                    <a href="account.html" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <i class="fas fa-user text-gray-700 dark:text-gray-300"></i>
-                    </a>
+                <div class="flex items-center space-x-4 h-full">
+                    <!-- Desktop Actions Only -->
+                    <div class="hidden lg:flex items-center space-x-4 h-full">
+                        <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center justify-center">
+                            <i class="fas fa-moon text-gray-700 dark:text-gray-300"></i>
+                        </button>
+                        <button class="relative p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center justify-center">
+                            <i class="fas fa-shopping-cart text-gray-700 dark:text-gray-300"></i>
+                            <span id="cartCount"
+                                class="absolute -top-1 -right-1 bg-orange-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                        </button>
+                        <a href="login.html" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center justify-center">
+                            <i class="fas fa-sign-in-alt text-gray-700 dark:text-gray-300"></i>
+                        </a>
+                        <a href="account.html" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center justify-center">
+                            <i class="fas fa-user text-gray-700 dark:text-gray-300"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Mobile: Only Hamburger -->
                     <button id="mobileMenuToggle"
-                        class="lg:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                        class="lg:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center justify-center">
                         <i class="fas fa-bars text-gray-700 dark:text-gray-300"></i>
                     </button>
                 </div>
@@ -86,39 +92,61 @@
 
     <!-- Mobile Menu -->
     <div id="mobileMenu"
-        class="lg:hidden fixed inset-0 bg-white dark:bg-gray-800 z-40 transform translate-x-full transition-transform duration-300">
-        <div class="p-4">
-            <div class="flex justify-between items-center mb-8">
-                <div class="flex items-center space-x-2">
-                    <div
-                        class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center">
-                        <i class="fas fa-fire text-white text-lg"></i>
+        class="lg:hidden fixed top-0 left-0 right-0 bottom-0 bg-white dark:bg-gray-800 z-50 transform translate-x-full transition-transform duration-300">
+        <div class="h-full flex flex-col overflow-hidden">
+            <div class="p-4 flex-shrink-0">
+                <div class="flex justify-between items-center mb-6">
+                    <div class="flex items-center space-x-2">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-fire text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold text-gray-800 dark:text-white">Lumière Candle Co.</span>
                     </div>
-                    <span class="text-xl font-bold text-gray-800 dark:text-white">Lumière Candle Co.</span>
+                    <button id="closeMobileMenu" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <i class="fas fa-times text-gray-700 dark:text-gray-300"></i>
+                    </button>
                 </div>
-                <button id="closeMobileMenu" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
-                    <i class="fas fa-times text-gray-700 dark:text-gray-300"></i>
-                </button>
             </div>
 
-            <nav class="space-y-4">
-                <a href="index.html"
-                    class="block py-3 text-lg text-orange-600 dark:text-orange-400 font-semibold">Home</a>
-                <a href="home2.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Home 2</a>
-                <a href="shop.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Shop</a>
-                <a href="collections.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Collections</a>
-                <a href="workshops.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Workshops</a>
-                <a href="about.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">About</a>
-                <a href="login.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Login</a>
-                <a href="contact.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Contact</a>
-                <a href="account.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Account</a>
-            </nav>
+            <div class="flex-1 overflow-y-auto px-4 pb-4">
+                <nav class="space-y-2">
+                    <a href="index.html"
+                        class="block py-2 text-lg text-orange-600 dark:text-orange-400 font-semibold">Home</a>
+                    <a href="home2.html" class="block py-2 text-lg text-gray-700 dark:text-gray-300">Home 2</a>
+                    <a href="shop.html" class="block py-2 text-lg text-gray-700 dark:text-gray-300">Shop</a>
+                    <a href="collections.html" class="block py-2 text-lg text-gray-700 dark:text-gray-300">Collections</a>
+                    <a href="workshops.html" class="block py-2 text-lg text-gray-700 dark:text-gray-300">Workshops</a>
+                    <a href="about.html" class="block py-2 text-lg text-gray-700 dark:text-gray-300">About</a>
+                    <a href="contact.html" class="block py-2 text-lg text-gray-700 dark:text-gray-300">Contact</a>
+                    <a href="login.html" class="block py-2 text-lg text-gray-700 dark:text-gray-300">Login</a>
+                    <a href="account.html" class="block py-2 text-lg text-gray-700 dark:text-gray-300">Account</a>
+                </nav>
 
-            <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
-                <button
-                    class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg mb-4">
-                    Shop Now
-                </button>
+                <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+                    <!-- Action Buttons -->
+                    <div class="flex items-center justify-around mb-4">
+                        <button id="mobileDarkModeToggle" class="p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <i class="fas fa-moon text-gray-700 dark:text-gray-300 text-lg"></i>
+                        </button>
+                        <button class="relative p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <i class="fas fa-shopping-cart text-gray-700 dark:text-gray-300 text-lg"></i>
+                            <span id="mobileCartCount"
+                                class="absolute -top-1 -right-1 bg-orange-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                        </button>
+                        <a href="login.html" class="p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <i class="fas fa-sign-in-alt text-gray-700 dark:text-gray-300 text-lg"></i>
+                        </a>
+                        <a href="account.html" class="p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <i class="fas fa-user text-gray-700 dark:text-gray-300 text-lg"></i>
+                        </a>
+                    </div>
+                    
+                    <button
+                        class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg">
+                        Shop Now
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -129,12 +157,11 @@
         <!-- Hero Section -->
         <section class="relative h-screen flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <div
-                    class="absolute inset-0 bg-gradient-to-br from-orange-100 via-amber-50 to-yellow-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-                </div>
-                <div class="absolute inset-0 bg-black opacity-20"></div>
-                <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                    alt="Candles" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-br from-orange-900/80 via-amber-900/80 to-yellow-900/80 dark:from-gray-900/90 dark:via-gray-800/90 dark:to-gray-900/90"></div>
+                <div class="absolute inset-0 bg-black opacity-30"></div>
+                <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Hand-poured candles" class="w-full h-full object-cover">
+                <!-- Additional overlay for better text readability -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             </div>
 
             <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -291,8 +318,8 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="text-center">
-                        <div
-                            class="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <img src="https://auradecor.co.in/cdn/shop/products/product-jpeg-500x500_1.png?v=1657541069" alt="100% Soy Wax" class="w-full h-40 object-cover rounded-lg mb-4">
+                        <div class="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-leaf text-orange-600 dark:text-orange-400 text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">100% Soy Wax</h3>
@@ -301,8 +328,8 @@
                     </div>
 
                     <div class="text-center">
-                        <div
-                            class="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <img src="https://danotechnology.com/wp-content/uploads/2023/08/Loki-photo-1.jpg" alt="Clean Burn" class="w-full h-40 object-cover rounded-lg mb-4">
+                        <div class="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-wind text-orange-600 dark:text-orange-400 text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Clean Burn</h3>
@@ -311,8 +338,8 @@
                     </div>
 
                     <div class="text-center">
-                        <div
-                            class="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <img src="https://a.storyblok.com/f/102007/768x432/94c9316db2/sustainable-packaging-paper-eco-friendly-disposable-tableware-plates-cups-bowls-recycling-signs.jpg" alt="Sustainable Packaging" class="w-full h-40 object-cover rounded-lg mb-4">
+                        <div class="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-recycle text-orange-600 dark:text-orange-400 text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Sustainable Packaging</h3>
@@ -382,8 +409,7 @@
                             <i class="fas fa-star"></i>
                         </div>
                         <p class="text-gray-700 dark:text-gray-300 mb-6 italic">"The Romance Collection was the perfect
-                            anniversary gift! My wife absolutely loved the scents and the packaging was so elegant. Will
-                            definitely be ordering more for special occasions."</p>
+                            anniversary gift! My wife absolutely loved the scents and the packaging  .."</p>
                         <div class="flex flex-col items-center">
                             <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=128&h=128&q=80"
                                 alt="Customer" class="w-12 h-12 rounded-full mb-3 object-cover shadow-sm">
@@ -430,13 +456,13 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <div class="flex items-center space-x-2 mb-4">
+                    <a href="index.html" class="flex items-center space-x-2 mb-4 group">
                         <div
-                            class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center">
+                            class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110">
                             <i class="fas fa-fire text-white text-lg"></i>
                         </div>
-                        <span class="text-xl font-bold">Lumière Candle Co.</span>
-                    </div>
+                        <span class="text-xl font-bold group-hover:text-orange-400 transition-colors duration-300">Lumière Candle Co.</span>
+                    </a>
                     <p class="text-gray-400">Hand-poured candles for calm & comfort. Natural, eco-friendly candles made
                         with love.</p>
                 </div>
@@ -492,13 +518,15 @@
                         </a>
                     </div>
                     <p class="text-gray-400 mb-4">Subscribe to our newsletter for exclusive offers</p>
-                    <div class="flex">
-                        <input type="email" placeholder="Your email"
-                            class="bg-gray-800 text-white px-4 py-2 rounded-l-lg flex-1">
-                        <button
-                            class="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-r-lg transition-colors duration-200">
-                            Subscribe
-                        </button>
+                    <div class="max-w-md mx-auto">
+                        <div class="flex flex-col sm:flex-row gap-2">
+                            <input type="email" placeholder="Enter your email"
+                                class="flex-1 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            <button
+                                class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg transition-colors duration-200 whitespace-nowrap">
+                                Subscribe
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

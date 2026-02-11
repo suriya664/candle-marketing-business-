@@ -2,6 +2,7 @@
 
 // Dark Mode Toggle
 const darkModeToggle = document.getElementById('darkModeToggle');
+const mobileDarkModeToggle = document.getElementById('mobileDarkModeToggle');
 const html = document.documentElement;
 
 // Check for saved dark mode preference
@@ -10,6 +11,7 @@ if (localStorage.getItem('darkMode') === 'true') {
     updateDarkModeIcon();
 }
 
+// Desktop dark mode toggle
 if (darkModeToggle) {
     darkModeToggle.addEventListener('click', () => {
         html.classList.toggle('dark');
@@ -18,16 +20,41 @@ if (darkModeToggle) {
     });
 }
 
+// Mobile dark mode toggle
+if (mobileDarkModeToggle) {
+    mobileDarkModeToggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        localStorage.setItem('darkMode', html.classList.contains('dark'));
+        updateDarkModeIcon();
+    });
+}
+
 function updateDarkModeIcon() {
-    if (!darkModeToggle) return;
-    const icon = darkModeToggle.querySelector('i');
-    if (icon) {
-        if (html.classList.contains('dark')) {
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-        } else {
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
+    // Update desktop icon
+    if (darkModeToggle) {
+        const icon = darkModeToggle.querySelector('i');
+        if (icon) {
+            if (html.classList.contains('dark')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+    }
+    
+    // Update mobile icon
+    if (mobileDarkModeToggle) {
+        const icon = mobileDarkModeToggle.querySelector('i');
+        if (icon) {
+            if (html.classList.contains('dark')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
         }
     }
 }
@@ -55,10 +82,12 @@ document.addEventListener('click', (e) => {
 // Cart functionality
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 const cartCount = document.getElementById('cartCount');
+const mobileCartCount = document.getElementById('mobileCartCount');
 
 function updateCartCount() {
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-    cartCount.textContent = totalItems;
+    if (cartCount) cartCount.textContent = totalItems;
+    if (mobileCartCount) mobileCartCount.textContent = totalItems;
 }
 
 // Add to cart buttons
@@ -146,6 +175,17 @@ window.addEventListener('scroll', () => {
     lastScrollTop = scrollTop;
 });
 
+// Back to Top button click event
+if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
 // Initialize cart count on page load
 updateCartCount();
 
@@ -207,25 +247,41 @@ function updateActiveNavigation() {
     const page = path.split("/").pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-link');
 
+    // Remove all active states first
+    navLinks.forEach(link => {
+        link.classList.remove('text-orange-600', 'dark:text-orange-400', 'font-semibold');
+        link.classList.add('text-gray-700', 'dark:text-gray-300');
+    });
+
+    // Add active state to current page
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-
-        // Match if current page name matches href
-        if (href === page || (page === 'index.html' && href === '/') || (page === '' && href === 'index.html')) {
-            link.classList.add('text-orange-600', 'dark:text-orange-400', 'font-semibold');
+        
+        // Handle different page matching scenarios
+        if (href === page || 
+            (page === 'index.html' && href === 'index.html') ||
+            (page === '' && href === 'index.html') ||
+            (page === '/' && href === 'index.html')) {
             link.classList.remove('text-gray-700', 'dark:text-gray-300');
-
-            // Highlight parent if in dropdown
-            const dropdownParent = link.closest('.group')?.querySelector('button span');
-            if (dropdownParent) {
-                dropdownParent.parentElement.classList.add('text-orange-600', 'dark:text-orange-400', 'font-semibold');
+            link.classList.add('text-orange-600', 'dark:text-orange-400', 'font-semibold');
+        }
+        
+        // Handle dropdown items (Shop, Collections)
+        if (page === 'shop.html' || page === 'collections.html') {
+            const shopDropdown = document.querySelector('.group button.nav-link');
+            if (shopDropdown) {
+                shopDropdown.classList.remove('text-gray-700', 'dark:text-gray-300');
+                shopDropdown.classList.add('text-orange-600', 'dark:text-orange-400', 'font-semibold');
             }
         }
     });
 }
 
-// Initialize active navigation
-updateActiveNavigation();
+// Initialize active navigation on page load
+document.addEventListener('DOMContentLoaded', updateActiveNavigation);
+
+// Also update when navigating (for single-page apps or dynamic content)
+window.addEventListener('popstate', updateActiveNavigation);
 function showNotification(message) {
     const notification = document.createElement('div');
     notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in-up';

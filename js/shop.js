@@ -189,9 +189,11 @@ function createProductCard(product) {
                     <span class="text-gray-600 dark:text-gray-400 text-sm ml-1">${product.rating}</span>
                 </div>
             </div>
-            <button class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded transition-colors duration-200 add-to-cart">
-                Add to Cart
-            </button>
+            <div class="text-center">
+                <button class="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-6 rounded transition-colors duration-200 add-to-cart">
+                    Add to Cart
+                </button>
+            </div>
         </div>
     `;
     return div;

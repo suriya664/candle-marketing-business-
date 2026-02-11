@@ -53,26 +53,29 @@
                         class="nav-link text-orange-600 dark:text-orange-400 font-semibold">Workshops</a>
                     <a href="about.html"
                         class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">About</a>
-                    <a href="login.html"
-                        class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Login</a>
-                    <a href="contact.html"
+                      <a href="contact.html"
                         class="nav-link text-gray-700 dark:text-gray-300 hover:text-orange-600">Contact</a>
                 </div>
 
                 <div class="flex items-center space-x-4">
-                    <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <i class="fas fa-moon text-gray-700 dark:text-gray-300"></i>
-                    </button>
-                    <button class="relative p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <i class="fas fa-shopping-cart text-gray-700 dark:text-gray-300"></i>
-                        <span id="cartCount"
-                            class="absolute -top-1 -right-1 bg-orange-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
-                    </button>
-                    <a href="account.html" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <i class="fas fa-user text-gray-700 dark:text-gray-300"></i>
-                    </a>
-                    <button id="mobileMenuToggle"
-                        class="lg:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <div class="hidden lg:flex items-center space-x-4 h-full">
+                        <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center justify-center">
+                            <i class="fas fa-moon text-gray-700 dark:text-gray-300"></i>
+                        </button>
+                        <button class="relative p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center justify-center">
+                            <i class="fas fa-shopping-cart text-gray-700 dark:text-gray-300"></i>
+                            <span id="cartCount"
+                                class="absolute -top-1 -right-1 bg-orange-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                        </button>
+                        <a href="login.html" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center justify-center">
+                            <i class="fas fa-sign-in-alt text-gray-700 dark:text-gray-300"></i>
+                        </a>
+                        <a href="account.html" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center justify-center">
+                            <i class="fas fa-user text-gray-700 dark:text-gray-300"></i>
+                        </a>
+                    </div>
+                    
+                    <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
                         <i class="fas fa-bars text-gray-700 dark:text-gray-300"></i>
                     </button>
                 </div>
@@ -81,33 +84,61 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="lg:hidden fixed inset-0 bg-white dark:bg-gray-800 z-40 transform translate-x-full">
-        <div class="p-4">
-            <div class="flex justify-between items-center mb-8">
-                <div class="flex items-center space-x-2">
-                    <div
-                        class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center">
-                        <i class="fas fa-fire text-white text-lg"></i>
+    <div id="mobileMenu" class="lg:hidden fixed top-0 left-0 right-0 bottom-0 bg-white dark:bg-gray-800 z-50 transform translate-x-full transition-transform duration-300">
+        <div class="h-full flex flex-col overflow-hidden">
+            <div class="p-4 flex-shrink-0">
+                <div class="flex justify-between items-center mb-6">
+                    <div class="flex items-center space-x-2">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-fire text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold text-gray-800 dark:text-white">Lumière Candle Co.</span>
                     </div>
-                    <span class="text-xl font-bold text-gray-800 dark:text-white">Lumière Candle Co.</span>
+                    <button id="closeMobileMenu" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <i class="fas fa-times text-gray-700 dark:text-gray-300"></i>
+                    </button>
                 </div>
-                <button id="closeMobileMenu" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
-                    <i class="fas fa-times text-gray-700 dark:text-gray-300"></i>
-                </button>
             </div>
 
-            <nav class="space-y-4">
-                <a href="index.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Home</a>
-                <a href="home2.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Home 2</a>
-                <a href="shop.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Shop</a>
-                <a href="collections.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Collections</a>
-                <a href="workshops.html"
-                    class="block py-3 text-lg text-orange-600 dark:text-orange-400 font-semibold">Workshops</a>
-                <a href="about.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">About</a>
-                <a href="login.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Login</a>
-                <a href="contact.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Contact</a>
-                <a href="account.html" class="block py-3 text-lg text-gray-700 dark:text-gray-300">Account</a>
-            </nav>
+            <div class="flex-1 overflow-y-auto px-4 pb-4">
+                <nav class="space-y-2">
+                    <a href="index.html" class="block py-2 text-lg text-gray-700 dark:text-gray-300">Home</a>
+                    <a href="home2.html" class="block py-2 text-lg text-gray-700 dark:text-gray-300">Home 2</a>
+                    <a href="shop.html" class="block py-2 text-lg text-gray-700 dark:text-gray-300">Shop</a>
+                    <a href="collections.html" class="block py-2 text-lg text-gray-700 dark:text-gray-300">Collections</a>
+                    <a href="workshops.html" class="block py-2 text-lg text-orange-600 dark:text-orange-400 font-semibold">Workshops</a>
+                    <a href="about.html" class="block py-2 text-lg text-gray-700 dark:text-gray-300">About</a>
+                    <a href="contact.html" class="block py-2 text-lg text-orange-600 dark:text-orange-400 font-semibold">Contact</a>
+                    <a href="login.html" class="block py-2 text-lg text-gray-700 dark:text-gray-300">Login</a>
+                    <a href="account.html" class="block py-2 text-lg text-gray-700 dark:text-gray-300">Account</a>
+                </nav>
+
+                <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+                    <!-- Action Buttons -->
+                    <div class="flex items-center justify-around mb-4">
+                        <button id="mobileDarkModeToggle" class="p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <i class="fas fa-moon text-gray-700 dark:text-gray-300 text-lg"></i>
+                        </button>
+                        <button class="relative p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <i class="fas fa-shopping-cart text-gray-700 dark:text-gray-300 text-lg"></i>
+                            <span id="mobileCartCount"
+                                class="absolute -top-1 -right-1 bg-orange-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                        </button>
+                        <a href="login.html" class="p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <i class="fas fa-sign-in-alt text-gray-700 dark:text-gray-300 text-lg"></i>
+                        </a>
+                        <a href="account.html" class="p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <i class="fas fa-user text-gray-700 dark:text-gray-300 text-lg"></i>
+                        </a>
+                    </div>
+                    
+                    <button
+                        class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg">
+                        Book Now
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -381,45 +412,8 @@
                             <div>
                                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Available Times
                                 </h3>
-                                <div class="space-y-4">
-                                    <button
-                                        class="w-full text-left p-4 bg-gray-50 dark:bg-gray-800 border border-transparent hover:border-orange-500 dark:hover:border-orange-500 rounded-xl transition-all duration-200">
-                                        <div class="flex justify-between items-center">
-                                            <div>
-                                                <span class="block font-bold text-gray-900 dark:text-white">10:00 AM -
-                                                    12:00 PM</span>
-                                                <span class="text-sm text-gray-500 dark:text-gray-400">8 slots
-                                                    remaining</span>
-                                            </div>
-                                            <span
-                                                class="text-xs font-semibold px-2 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded uppercase">Beginner</span>
-                                        </div>
-                                    </button>
-                                    <button
-                                        class="w-full text-left p-4 bg-orange-50 dark:bg-orange-900/40 border border-orange-500 rounded-xl transition-all duration-200">
-                                        <div class="flex justify-between items-center">
-                                            <div>
-                                                <span class="block font-bold text-gray-900 dark:text-white">2:00 PM -
-                                                    4:00 PM</span>
-                                                <span class="text-sm text-gray-500 dark:text-gray-400">Selected</span>
-                                            </div>
-                                            <span
-                                                class="text-xs font-semibold px-2 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded uppercase">Beginner</span>
-                                        </div>
-                                    </button>
-                                    <button
-                                        class="w-full text-left p-4 bg-gray-50 dark:bg-gray-800 border border-transparent hover:border-orange-500 dark:hover:border-orange-500 rounded-xl transition-all duration-200">
-                                        <div class="flex justify-between items-center">
-                                            <div>
-                                                <span class="block font-bold text-gray-900 dark:text-white">6:00 PM -
-                                                    8:00 PM</span>
-                                                <span class="text-sm text-gray-500 dark:text-gray-400">2 slots
-                                                    remaining</span>
-                                            </div>
-                                            <span
-                                                class="text-xs font-semibold px-2 py-1 bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300 rounded uppercase">Advanced</span>
-                                        </div>
-                                    </button>
+                                <div class="time-slot space-y-4">
+                                    <!-- Time slots will be dynamically loaded here -->
                                 </div>
                             </div>
                         </div>
@@ -492,61 +486,65 @@
         </section>
 
         <!-- Corporate Team Building -->
-        <section class="py-16 bg-white dark:bg-gray-800">
+        <section class="py-12 bg-white dark:bg-gray-800">
             <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
+                <div class="text-center mb-8">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Corporate Team
                         Building</h2>
                     <p class="text-lg text-gray-600 dark:text-gray-400">Strengthen your team through creative
                         collaboration</p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Why Choose Our Team Building?
-                        </h3>
-                        <ul class="space-y-4 mb-6">
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900 dark:text-white">Creative Collaboration</h4>
-                                    <p class="text-gray-600 dark:text-gray-400">Teams work together to create unique
-                                        candle blends</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900 dark:text-white">Stress Relief</h4>
-                                    <p class="text-gray-600 dark:text-gray-400">Relaxing atmosphere promotes team
-                                        bonding</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900 dark:text-white">Customized Experience</h4>
-                                    <p class="text-gray-600 dark:text-gray-400">Tailored to your company's goals and
-                                        culture</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900 dark:text-white">Take-Home Memories</h4>
-                                    <p class="text-gray-600 dark:text-gray-400">Everyone leaves with their handmade
-                                        creation</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <button
-                            class="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-                            Get Quote for Your Team
-                        </button>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                    <div class="flex flex-col justify-between text-center lg:text-left">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Why Choose Our Team Building?
+                            </h3>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start justify-center lg:justify-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                    <div class="text-center lg:text-left">
+                                        <h4 class="font-semibold text-gray-900 dark:text-white">Creative Collaboration</h4>
+                                        <p class="text-gray-600 dark:text-gray-400">Teams work together to create unique
+                                            candle blends</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start justify-center lg:justify-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                    <div class="text-center lg:text-left">
+                                        <h4 class="font-semibold text-gray-900 dark:text-white">Stress Relief</h4>
+                                        <p class="text-gray-600 dark:text-gray-400">Relaxing atmosphere promotes team
+                                            bonding</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start justify-center lg:justify-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                    <div class="text-center lg:text-left">
+                                        <h4 class="font-semibold text-gray-900 dark:text-white">Customized Experience</h4>
+                                        <p class="text-gray-600 dark:text-gray-400">Tailored to your company's goals and
+                                            culture</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start justify-center lg:justify-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                    <div class="text-center lg:text-left">
+                                        <h4 class="font-semibold text-gray-900 dark:text-white">Take-Home Memories</h4>
+                                        <p class="text-gray-600 dark:text-gray-400">Everyone leaves with their handmade
+                                            creation</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <button
+                                class="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+                                Get Quote for Your Team
+                            </button>
+                        </div>
                     </div>
-                    <div>
+                    <div class="flex items-center justify-center">
                         <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                            alt="Team Building" class="rounded-lg shadow-lg">
+                            alt="Team Building" class="rounded-lg shadow-lg w-4/5 h-4/5 object-cover">
                     </div>
                 </div>
             </div>
@@ -559,13 +557,13 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <div class="flex items-center space-x-2 mb-4">
+                    <a href="index.html" class="flex items-center space-x-2 mb-4 group">
                         <div
-                            class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center">
+                            class="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-600 rounded-full flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110">
                             <i class="fas fa-fire text-white text-lg"></i>
                         </div>
-                        <span class="text-xl font-bold">Lumière Candle Co.</span>
-                    </div>
+                        <span class="text-xl font-bold group-hover:text-orange-400 transition-colors duration-300">Lumière Candle Co.</span>
+                    </a>
                     <p class="text-gray-400">Hand-poured candles for calm & comfort.</p>
                 </div>
 
@@ -621,6 +619,179 @@
     </a>
 
     <script src="js/main.js"></script>
+    <script>
+        // Calendar functionality
+        let selectedDate = null;
+        let selectedTime = null;
+        let currentMonth = new Date().getMonth();
+        let currentYear = new Date().getFullYear();
+        
+        // Calendar data - available dates and time slots
+        const calendarData = {
+            '2026-02-13': ['10:00 AM - 12:00 PM', '2:00 PM - 4:00 PM', '6:00 PM - 8:00 PM'],
+            '2026-02-15': ['10:00 AM - 12:00 PM', '2:00 PM - 4:00 PM'],
+            '2026-02-20': ['10:00 AM - 12:00 PM', '2:00 PM - 4:00 PM', '6:00 PM - 8:00 PM'],
+            '2026-02-22': ['10:00 AM - 12:00 PM', '2:00 PM - 4:00 PM'],
+            '2026-02-27': ['10:00 AM - 12:00 PM', '2:00 PM - 4:00 PM', '6:00 PM - 8:00 PM']
+        };
+        
+        // Initialize calendar
+        function initCalendar() {
+            const calendarDays = document.querySelectorAll('.aspect-square.flex.items-center.justify-center');
+            
+            calendarDays.forEach((dayElement, index) => {
+                const dayNumber = dayElement.textContent.trim();
+                
+                if (dayNumber && !isNaN(dayNumber)) {
+                    const dateStr = `2026-02-${dayNumber.padStart(2, '0')}`;
+                    const isAvailable = calendarData[dateStr];
+                    
+                    if (isAvailable) {
+                        dayElement.addEventListener('click', function() {
+                            selectDate(this, dayNumber, dateStr);
+                        });
+                        
+                        // Add visual indicator for available dates
+                        dayElement.classList.add('cursor-pointer');
+                        if (dayNumber === '13') {
+                            dayElement.classList.add('bg-orange-600', 'text-white', 'shadow-md', 'font-bold');
+                        }
+                    } else {
+                        // Disable unavailable dates
+                        dayElement.classList.add('opacity-30', 'cursor-not-allowed');
+                        dayElement.classList.remove('hover:bg-orange-50', 'dark:hover:bg-orange-900/30');
+                    }
+                }
+            });
+            
+            // Time slot selection
+            const timeSlots = document.querySelectorAll('.time-slot button');
+            timeSlots.forEach(slot => {
+                slot.addEventListener('click', function() {
+                    selectTimeSlot(this);
+                });
+            });
+        }
+        
+        function selectDate(element, dayNumber, dateStr) {
+            // Remove previous selection
+            document.querySelectorAll('.aspect-square.flex.items-center.justify-center').forEach(el => {
+                el.classList.remove('bg-orange-600', 'text-white', 'shadow-md', 'font-bold');
+                el.classList.add('hover:bg-orange-50', 'dark:hover:bg-orange-900/30');
+            });
+            
+            // Add selection to clicked date
+            element.classList.remove('hover:bg-orange-50', 'dark:hover:bg-orange-900/30');
+            element.classList.add('bg-orange-600', 'text-white', 'shadow-md', 'font-bold');
+            
+            selectedDate = dateStr;
+            updateTimeSlots(dateStr);
+            
+            // Show notification
+            showNotification(`Selected February ${dayNumber}, 2026`);
+        }
+        
+        function updateTimeSlots(dateStr) {
+            const availableSlots = calendarData[dateStr] || [];
+            const timeSlotContainer = document.querySelector('.time-slot');
+            
+            if (timeSlotContainer) {
+                // Clear existing time slots
+                timeSlotContainer.innerHTML = '';
+                
+                // Add available time slots
+                availableSlots.forEach((slot, index) => {
+                    const button = document.createElement('button');
+                    button.className = 'w-full text-left p-4 bg-gray-50 dark:bg-gray-800 border border-transparent hover:border-orange-500 dark:hover:border-orange-500 rounded-xl transition-all duration-200';
+                    button.innerHTML = `
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="block font-bold text-gray-900 dark:text-white">${slot}</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Available</span>
+                            </div>
+                            <span class="text-xs font-semibold px-2 py-1 bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300 rounded uppercase">Available</span>
+                        </div>
+                    `;
+                    
+                    button.addEventListener('click', function() {
+                        selectTimeSlot(this);
+                    });
+                    
+                    timeSlotContainer.appendChild(button);
+                });
+            }
+        }
+        
+        function selectTimeSlot(element) {
+            // Remove previous selection
+            document.querySelectorAll('.time-slot button').forEach(el => {
+                el.classList.remove('bg-orange-50', 'dark:bg-orange-900/40', 'border-orange-500');
+                el.classList.add('bg-gray-50', 'dark:bg-gray-800', 'border-transparent');
+            });
+            
+            // Add selection to clicked time slot
+            element.classList.remove('bg-gray-50', 'dark:bg-gray-800', 'border-transparent');
+            element.classList.add('bg-orange-50', 'dark:bg-orange-900/40', 'border-orange-500');
+            
+            selectedTime = element.querySelector('.font-bold').textContent;
+            showNotification(`Selected time: ${selectedTime}`);
+        }
+        
+        // Month navigation
+        document.querySelectorAll('.fa-chevron-left, .fa-chevron-right').forEach(btn => {
+            btn.parentElement.addEventListener('click', function() {
+                // Simple month navigation (can be enhanced)
+                showNotification('Month navigation would be implemented here');
+            });
+        });
+        
+        // Form submission
+        const bookingForm = document.querySelector('form');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (!selectedDate || !selectedTime) {
+                    showNotification('Please select a date and time slot');
+                    return;
+                }
+                
+                // Collect form data
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
+                
+                // Show success message
+                showNotification('Booking submitted successfully! We will contact you soon.');
+                
+                // Reset form
+                this.reset();
+                selectedDate = null;
+                selectedTime = null;
+                
+                // Reset calendar selection
+                document.querySelectorAll('.aspect-square.flex.items-center.justify-center').forEach(el => {
+                    el.classList.remove('bg-orange-600', 'text-white', 'shadow-md', 'font-bold');
+                    el.classList.add('hover:bg-orange-50', 'dark:hover:bg-orange-900/30');
+                });
+            });
+        }
+        
+        // Initialize calendar when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initCalendar);
+        
+        // Touch support for mobile devices
+        if ('ontouchstart' in window) {
+            document.querySelectorAll('.aspect-square.flex.items-center.justify-center').forEach(el => {
+                el.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.95)';
+                });
+                
+                el.addEventListener('touchend', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>

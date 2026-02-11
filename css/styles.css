@@ -34,31 +34,100 @@
 /* Dark mode */
 .dark .nav-link::after { background-color: #fb923c; }
 
-/* Scrollbar */
-::-webkit-scrollbar { width: 12px; }
-::-webkit-scrollbar-track { background: #f1f1f1; }
-.dark ::-webkit-scrollbar-track { background: #374151; }
-::-webkit-scrollbar-thumb { 
-    background: #ea580c; 
-    border-radius: 6px; 
-    border: 3px solid #f1f1f1;
+/* Invisible Scrollbar - Cross-browser & Theme Independent */
+html {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
 }
-.dark ::-webkit-scrollbar-thumb {
-    border: 3px solid #374151;
+
+body {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
 }
+
+* {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+
+/* WebKit browsers (Chrome, Safari, Edge, Opera) */
+::-webkit-scrollbar {
+    width: 0px !important;
+    height: 0px !important;
+    background: transparent !important;
+    display: none !important;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent !important;
+    width: 0px !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent !important;
+    width: 0px !important;
+    border: none !important;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent !important;
+}
+
 ::-webkit-scrollbar-button {
-    display: block;
-    height: 12px;
-    background-color: #fb923c;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 8px;
+    display: none !important;
+    width: 0px !important;
+    height: 0px !important;
 }
-::-webkit-scrollbar-button:vertical:decrement {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z'/%3E%3C/svg%3E");
+
+/* Dark mode scrollbar override */
+.dark ::-webkit-scrollbar {
+    width: 0px !important;
+    height: 0px !important;
+    background: transparent !important;
+    display: none !important;
 }
-::-webkit-scrollbar-button:vertical:increment {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z'/%3E%3C/svg%3E");
+
+.dark ::-webkit-scrollbar-track {
+    background: transparent !important;
+    width: 0px !important;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: transparent !important;
+    width: 0px !important;
+    border: none !important;
+}
+
+.dark ::-webkit-scrollbar-corner {
+    background: transparent !important;
+}
+
+.dark ::-webkit-scrollbar-button {
+    display: none !important;
+    width: 0px !important;
+    height: 0px !important;
+}
+
+/* Force scrollbar hiding on all elements */
+html, body, div, section, main, article, aside, nav, header, footer {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+div::-webkit-scrollbar,
+section::-webkit-scrollbar,
+main::-webkit-scrollbar,
+article::-webkit-scrollbar,
+aside::-webkit-scrollbar,
+nav::-webkit-scrollbar,
+header::-webkit-scrollbar,
+footer::-webkit-scrollbar {
+    width: 0px !important;
+    height: 0px !important;
+    background: transparent !important;
+    display: none !important;
 }
 
 /* Dropdown Bridge */
