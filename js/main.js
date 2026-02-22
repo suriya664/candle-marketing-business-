@@ -1,4 +1,4 @@
-// Main JavaScript for Lumière Candle Co.
+// Main JavaScript for Lumière
 
 // Dark Mode Toggle
 const darkModeToggle = document.getElementById('darkModeToggle');
@@ -43,7 +43,7 @@ function updateDarkModeIcon() {
             }
         }
     }
-    
+
     // Update mobile icon
     if (mobileDarkModeToggle) {
         const icon = mobileDarkModeToggle.querySelector('i');
@@ -151,28 +151,38 @@ const navbar = document.getElementById('navbar');
 const backToTopBtn = document.getElementById('backToTop');
 let lastScrollTop = 0;
 
+let isScrolling = false;
+
 window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (!isScrolling) {
+        window.requestAnimationFrame(() => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    // Navbar visibility
-    if (scrollTop > lastScrollTop && scrollTop > 100) {
-        navbar.style.transform = 'translateY(-100%)';
-    } else {
-        navbar.style.transform = 'translateY(0)';
+            // Navbar visibility
+            if (navbar) {
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    navbar.style.transform = 'translateY(-100%)';
+                } else {
+                    navbar.style.transform = 'translateY(0)';
+                }
+            }
+
+            // Back to Top button visibility
+            if (backToTopBtn) {
+                if (scrollTop > 300) {
+                    backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-10');
+                    backToTopBtn.classList.add('opacity-100', 'visible', 'translate-y-0');
+                } else {
+                    backToTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-10');
+                    backToTopBtn.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                }
+            }
+
+            lastScrollTop = scrollTop;
+            isScrolling = false;
+        });
+        isScrolling = true;
     }
-
-    // Back to Top button visibility
-    if (backToTopBtn) {
-        if (scrollTop > 300) {
-            backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-10');
-            backToTopBtn.classList.add('opacity-100', 'visible', 'translate-y-0');
-        } else {
-            backToTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-10');
-            backToTopBtn.classList.remove('opacity-100', 'visible', 'translate-y-0');
-        }
-    }
-
-    lastScrollTop = scrollTop;
 });
 
 // Back to Top button click event
@@ -256,16 +266,16 @@ function updateActiveNavigation() {
     // Add active state to current page
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        
+
         // Handle different page matching scenarios
-        if (href === page || 
+        if (href === page ||
             (page === 'index.html' && href === 'index.html') ||
             (page === '' && href === 'index.html') ||
             (page === '/' && href === 'index.html')) {
             link.classList.remove('text-gray-700', 'dark:text-gray-300');
             link.classList.add('text-orange-600', 'dark:text-orange-400', 'font-semibold');
         }
-        
+
         // Handle dropdown items (Shop, Collections)
         if (page === 'shop.html' || page === 'collections.html') {
             const shopDropdown = document.querySelector('.group button.nav-link');
